@@ -3,7 +3,7 @@
 // use this for valina Javascript
 'use strict';
 
-// 2. Variable
+// 2. Variable, rw(read/write)
 // let (added in ES6)
 let globalName = 'global name';
 {
@@ -28,18 +28,25 @@ age = 4;
 var age;
 
 
-// 3. contants
-// favor immutable data type always for a few reasons:
-// security, thread safety, reduce human mistakes
-// 한번 작성한 값이 변경되지 않아서 보안에 좋다
-// 여러 스레드가 동시에 돌 때, 값이 변경되지 않는다.
-// 실수방지
+// 3. contant, r(read only)
+// use const whenever possible.
+// only use let if variable needs to change.
 const daysInWeek = 7;
 const maxNumber = 5;
 
+//  Note!
+// Immutable data types: primitive types, frozen obejects(i.e. object.freeze()) // 값 변경 불가
+// Mutable data types: all objects by default are mutable in JS 
+// favor immutable data type always for a few reasons:
+// security, thread safety, reduce human mistakes
+
+
+
 // 4. Variable types
-// privitive(single item): number, string, boolean, number, null, undefined, symbol
+// primitive(single item): number, string, boolean, number, null, undefined, symbol
+// primitive의 경우 값 자체가 메모리에 올라감
 // object(box container)
+// object는 너무 커서 메모리에 한번에 못올라감 -> ref통해서 메모리에 접근
 // function, first-class function : function도 변수에 할당이 가능함 따라서 인자로도 전달가능하고 return 가능함
 
 // number - special numeric values: infinity, -infinity, Nan
