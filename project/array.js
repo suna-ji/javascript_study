@@ -57,7 +57,8 @@ console.log(fruits);
 
 // ❗️ note ❗️ shift, unshift are slower than pop, push
 // splice: remove an item by index position
-fruits.push('🍓', '🍑', '🍋');
+console.clear();
+console.log(fruits.push('🍓', '🍑', '🍋'));
 console.log(fruits);
 fruits.splice(1,1);
 console.log(fruits);
@@ -71,7 +72,6 @@ console.log(newFruits);
 
 // 5. Searching
 // indexOf: find the index
-console.clear();
 console.log(fruits);
 console.log(fruits.indexOf('🍎')); // 만약 없다면 -1 출력
 console.log(fruits.indexOf('🍉'));
