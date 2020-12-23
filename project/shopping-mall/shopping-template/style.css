@@ -29,6 +29,7 @@
 .img_button{
   background-color: transparent;
   border: none;
+  margin-left: 15px;
 }
 
 .button_img{
@@ -38,6 +39,18 @@
 
 .text_button{
   height: 50px;
+  width: 50px;
+  margin-left: 15px;
+  border: none;
+}
+.blue_btn{
+  background-color: var(--color-blue);
+}
+.yellow_btn{
+  background-color: var(--color-yellow);
+}
+.pink_btn{
+  background-color: var(--color-pink);
 }
 
 
