@@ -7,18 +7,29 @@
     <link rel="stylesheet" href="style.css" />
     <script src="src/main.js" defer></script>
   </head>
-  <body class = "page">
-    <div class = "logo">
-      <img src = "../../shopping-mall/imgs/logo.png">
+  <body class="page">
+    <header class="logo">
+      <img src="../../shopping-mall/imgs/logo.png" />
+    </header>
+    <div class="button_div">
+      <button class="img_button" value="tshirts" onClick="clickButton(value);">
+        <img src="../../shopping-mall/imgs/blue_t.png" class="button_img" />
+      </button>
+      <button class="img_button" value="pants" onClick="clickButton(value);">
+        <img src="../../shopping-mall/imgs/blue_p.png" class="button_img" />
+      </button>
+      <button class="img_button" value="skirt" onClick="clickButton(value);">
+        <img src="../../shopping-mall/imgs/blue_s.png" class="button_img" />
+      </button>
+      <button class="text_button blue_btn" value="blue" onClick="clickButton(value);"> Blue </button>
+      <button class="text_button yellow_btn" value="yellow" onClick="clickButton(value);">Yellow </button>
+      <button class="text_button pink_btn" value="pink" onClick="clickButton(value);">Pink </button>
     </div>
-    <div class = "button_div">
-      <div><button class = "img_button"><img src = "../../shopping-mall/imgs/blue_t.png" class = "button_img"></button></div>
-      <div><button class = "img_button"><img src = "../../shopping-mall/imgs/blue_p.png" class = "button_img"></button></div>
-      <div><button class = "img_button"><img src = "../../shopping-mall/imgs/blue_s.png" class = "button_img"></button></div>
-      <div><button class = "text_button blue_btn">Blue</button></div>
-      <div><button class = "text_button yellow_btn">Yellow</button></div>
-      <div><button class = "text_button pink_btn">Pink</button></div>
-    </div>
-   
+    <div class="list_div">
+      <ul>
+          <li class = "item_box"></li>
+          <li class = "item_box">dd</li>
+          <li class = "item_box">dd</li>
+      </ul>
   </body>
 </html>
