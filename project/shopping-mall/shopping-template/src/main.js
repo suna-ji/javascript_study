@@ -27,12 +27,33 @@ function createHTMLString(item) {
         </li>
     `;
 }
+function onButtonClick(event, items) {
+    const dataset = event.target.dataset;
+    const key = dataset.key;
+    const value = dataset.value;
+    if (key == null || value == null) {
+        return;
+    } else {
+        const filteredItems = items.filter(item => item[key] === value);
+        displayItems(filteredItems);
+    }
+
+}
+
+function setEventListeners(items) {
+    const logo = document.querySelector('.logo');
+    const buttons = document.querySelector('.buttons');
+    // 이벤트 리스너를 하나씩 등록하기 보다 컨테이너에 등록해서 한곳에서 핸들링하도록 하는게 효율적(이벤트 위임)
+    logo.addEventListener('click', () => displayItems(items));
+    buttons.addEventListener('click', event => onButtonClick(event, items));
+}
+
 
 // json파일을 동적으로 불러와야함 -> 시간이 걸림 -> promise리턴
 // main
 loadItems()
     .then(items => {
         displayItems(items);
-        //setEventListeners();
+        setEventListeners(items);
     })
     .catch(console.log);
