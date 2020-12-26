@@ -6,64 +6,97 @@
   --color-yellow: #fbbe28;
   --color-pink: #fd7f84;
   --color-light-grey: #dfdfdf;
+
+  /* size */
+  --size-button: 60px;
+  --font-size: 18px;
+  --base-space: 8px;
+  --size-border: 4px;
+  --size-thumbnail: 50px;
+
+  /* animation */
+  --animation-duration: 300ms;
 }
 
-* {
-  box-sizing: border-box;
-}
-/* header */
-.page{
+body {
+  height: 100vh;
   background-color: var(--color-black);
   display: flex;
-  flex-flow: column wrap;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
-/* button_div */
-.button_div{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+.logo {
+  cursor: pointer;
+  transition: transform var(--animation-duration) ease;
 }
 
-.img_button{
+.btn:hover,
+.logo:hover{
+  transform: scale(1.1);
+}
+
+.btn{
   background-color: transparent;
-  border: none;
-  margin-left: 15px;
+  border:none;
+  outline: none;
+  cursor: pointer;
+  transition: transform var(--animation-duration) ease;
+  margin-right: var(--base-space);
 }
 
-.button_img{
-  width: 50px;
-  height: 50px;
+
+.buttons{
+  display: flex;
+  align-items: center;
 }
 
-.text_button{
-  height: 50px;
-  width: 50px;
-  margin-left: 15px;
-  border: none;
+.imgBtn{
+  width:var(--size-button);
+  height:var(--size-button);
 }
-.blue_btn{
+
+.colorBtn{
+  font-size: var(--font-size);
+  padding: calc(var(--base-space)*2);
+  border-radius: var(--size-border);
+}
+
+.blue{
   background-color: var(--color-blue);
 }
-.yellow_btn{
+
+.yellow{
   background-color: var(--color-yellow);
 }
-.pink_btn{
+
+.pink{
   background-color: var(--color-pink);
 }
 
-/* list_div */
-.list_div{
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
+.items{
+  width: 60%;
+  height: 60%;
+  list-style: none;
+  padding-left: 0;
+  overflow-y: scroll;
 }
 
-.item_box{
+.item{
   background-color: var(--color-white);
-  list-style: none;
-  width: 400px;
-  height: 55px;
-  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  padding: var(--base-space);
+  margin-bottom: var(--base-space);
+}
+
+.item__thumbnail{
+  width: var(--size-thumbnail);
+  height: var(--size-thumbnail);
+}
+
+.item__description{
+  margin-left: var(--base-space);
+  font-size: var(--font-size);
 }

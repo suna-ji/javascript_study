@@ -7,29 +7,24 @@
     <link rel="stylesheet" href="style.css" />
     <script src="src/main.js" defer></script>
   </head>
-  <body class="page">
-    <header class="logo">
-      <img src="../../shopping-mall/imgs/logo.png" />
-    </header>
-    <div class="button_div">
-      <button class="img_button" value="tshirts" onClick="clickButton(value);">
-        <img src="../../shopping-mall/imgs/blue_t.png" class="button_img" />
-      </button>
-      <button class="img_button" value="pants" onClick="clickButton(value);">
-        <img src="../../shopping-mall/imgs/blue_p.png" class="button_img" />
-      </button>
-      <button class="img_button" value="skirt" onClick="clickButton(value);">
-        <img src="../../shopping-mall/imgs/blue_s.png" class="button_img" />
-      </button>
-      <button class="text_button blue_btn" value="blue" onClick="clickButton(value);"> Blue </button>
-      <button class="text_button yellow_btn" value="yellow" onClick="clickButton(value);">Yellow </button>
-      <button class="text_button pink_btn" value="pink" onClick="clickButton(value);">Pink </button>
-    </div>
-    <div class="list_div">
-      <ul>
-          <li class = "item_box"></li>
-          <li class = "item_box">dd</li>
-          <li class = "item_box">dd</li>
-      </ul>
+  <body>
+    <!-- Logo -->
+    <img src = "img/logo.png" alt = "Logo" class = "logo"/>
+    <!-- Button -->
+    <section class="buttons"> <!--section : block --> <!-- button : inline -->
+      <button class="btn"><img src="img/blue_t.png" alt="tshirt" class="imgBtn"/></button> 
+      <button class="btn"><img src="img/blue_p.png" alt="pants" class="imgBtn"/></button>
+      <button class="btn"><img src="img/blue_s.png" alt="skirt" class="imgBtn"/></button>
+      <button class="btn colorBtn blue">Blue</button>
+      <button class="btn colorBtn yellow">Yellow</button>
+      <button class="btn colorBtn pink">Pink</button> 
+    </section>
+    <!-- Items -->
+    <ul class="items">
+      <li class="item">
+        <img src="img/blue_t.png" alt="tshirt" class="item__thumbnail">
+        <span class="item__description">male, large</span>
+      </li>
+    </ul>
   </body>
 </html>
